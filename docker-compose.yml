@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  nginx:
+    build:
+      context: ~/Desktop/docker1
+      dockerfile: Dockerfile
+    volumes:
+      - volume1:/home/volume1/
+    ports:
+      - "8000:80"
+    networks:
+      - network1
+volumes:
+  volume1:
+networks:
+  network1:
+    driver: bridge
